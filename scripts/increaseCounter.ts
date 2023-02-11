@@ -9,6 +9,7 @@ export async function run(provider: NetworkProvider) {
     const openedContract = provider.open(newcounter);
     //sending increase and I should find way to wait for it to complete the transaction
     //and then contunie to check the new value of the counter
+    
     await openedContract.sendIncrease(provider.sender(),{
         increaseBy,
         value: toNano('0.05'),
